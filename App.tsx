@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import {
   useFonts,
   Archivo_400Regular,
@@ -9,9 +9,11 @@ import {
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 
 import { Home } from './src/screens/Home';
-
+import AppLoading from 'expo-app-loading';
+import { ThemeProvider } from 'styled-components';
+import theme from './src/styles/theme';
 export default function App() {
-  const [fontsLoaded] = useState({
+  const [fontsLoaded] = useFonts({
     Archivo_400Regular,
     Archivo_500Medium,
     Archivo_600SemiBold,
@@ -20,8 +22,12 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return;
+    return <AppLoading />;
   }
 
-  return <Home />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
+  );
 }
