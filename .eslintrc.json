@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  // "plugins": ["react", "prettier", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  //   "rules": {
+  //     // "semi": ["error", "always"],
+  //     // "quotes": ["error", "double"]
+  //   }
+  // "rules": {
+  // 	"import/no-unresolved": 0,
+  // 	"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
+  // 	}
+  // }
+  "rules": {
+    "import/no-unresolved": 0,
+    "comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx", ".ts"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": ["error", { "ignore": ["navigation", "route"] }],
+    "react/state-in-constructor": "off",
+    "react/destructuring-assignment": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/extensions": ["ignorePackages"],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", ["internal", "sibling"]]
+      }
+    ]
+  }
+}
