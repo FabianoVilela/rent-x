@@ -1,6 +1,6 @@
 export default {
   colors: {
-    header: '#1B1B1F',
+    background_header: '#1B1B1F',
     background_primary: '#FAF5F6',
     background_secundary: '#FFFFFF',
     text: '#7A7A80',
@@ -15,7 +15,7 @@ export default {
   },
   fonts: {
     primary_400: 'Inter_400Regular',
-    primary_500: 'Inter_500Mediu',
+    primary_500: 'Inter_500Medium',
 
     secondary_400: 'Archivo_400Regular',
     secondary_500: 'Archivo_500Medium',
